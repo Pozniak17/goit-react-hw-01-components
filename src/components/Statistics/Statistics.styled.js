@@ -2,19 +2,20 @@ import { styled } from 'styled-components';
 import { getRandomHexColor } from 'components/utils/GetRandomHexColor';
 
 export const Container = styled.section`
-  width: 250px;
+  width: ${props => props.theme.sizes[1]}px; //300
   margin: auto;
   text-align: center;
-  background-color: white;
-  margin-bottom: 20px;
+  background-color: ${props => props.theme.colors.white};
+  margin-bottom: ${props => props.theme.spacing(4)}; //20px
+  box-shadow: ${props => props.theme.shadows.standart};
 `;
 
 export const Title = styled.h2`
   text-transform: uppercase;
   color: #585c61;
-  font-weight: 500;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-weight: ${props => props.theme.fontWeights.medium}; //500
+  padding-top: ${props => props.theme.spacing(4)}; //20px
+  padding-bottom: ${props => props.theme.spacing(4)}; //20px
 `;
 
 export const List = styled.ul`
@@ -23,23 +24,22 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  width: 50px;
-  height: 50px;
+  width: ${props => props.theme.spacing(12)}; //60px
+  height: ${props => props.theme.spacing(12)}; //60px
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid grey;
   background-color: ${getRandomHexColor};
 `;
 
 export const Label = styled.span`
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
+  color: ${props => props.theme.colors.white};
+  font-size: ${props => props.theme.fontSizes.xs}; //12px
+  font-weight: ${props => props.theme.fontWeights.bold};
 `;
 
 export const Percentage = styled.span`
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
+  font-size: ${props => props.theme.fontSizes.m}; //18px
+  color: ${props => props.theme.colors.white};
+  font-weight: ${props => props.theme.fontWeights.bold};
 `;

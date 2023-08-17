@@ -1,9 +1,7 @@
 import { styled } from 'styled-components';
 
-// margin-top: ${props => props.theme.spacing(5)}; //20
-
 export const ProfileCard = styled.div`
-  margin: 150px auto;
+  margin: 100px auto;
   width: 300px;
   text-align: center;
   box-shadow: ${props => props.theme.shadows.standart};
