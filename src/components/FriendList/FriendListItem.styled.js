@@ -14,7 +14,7 @@ export const Item = styled.li`
 `;
 
 export const Status = styled.span`
-  background-color: ${props => (props.status ? 'green' : 'blue')};
+  background-color: ${props => (props.$status ? 'green' : 'blue')};
   padding: 8px;
   border-radius: 50%;
   margin-left: 15px;
