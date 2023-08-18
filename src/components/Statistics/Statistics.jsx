@@ -10,7 +10,6 @@ import {
 } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
-  console.log(stats);
   return (
     <Container>
       {title && <Title>{title}</Title>}
@@ -35,5 +34,5 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     })
-  ),
+  ).isRequired,
 };
